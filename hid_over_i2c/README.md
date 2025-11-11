@@ -1,3 +1,14 @@
+# about HID over i2c
+
+![message structure of hid over i2c](HID_Message_structure.webp)
+
+HID is a standard first designed to work with USB, but more brodly has been used in i2c/bluetooth and other prodicals to handle generic HID events.  
+
+In the image above you can see the orange parts which the parts where for the most part the messages are just plane HID events.  The rest of the messages are added to accommodate the different communication structure I2C has.  
+
+* note - that even if the arrow is pointing from device to host.  Since this is I2C the host has to initiate the communication.  
+    * You can notify that you have data to be processed using a gpio pin to notify the host that you have data.
+
 ## programming
 * openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "program i2c_example.elf verify reset exit"
 
@@ -23,6 +34,8 @@
     * i2c-hid.c
 * https://blog.stabel.family/raspberry-pi-4-device-tree/
     * shows you how to debug device tree terminal
+* Get pinout of pin
+    * pinout
 
 
 ### Steps to add overlay 
