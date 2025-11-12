@@ -46,7 +46,7 @@ compile and move to overlays
 * - Edit /boot/firmware/config.txt 
 * - dtoverlay=i2cHID
 
-After this all you need to do is cp the i2cHID.dtbo over to the /boot/overlays folder
+After this all you need to do is cp the i2cHID.dtbo over to the /boot/overlays folder every time you make a edit to the original dts file.
 
 
 ## linux hid notes
